@@ -1,0 +1,169 @@
+<!doctype html>
+<!-- author: Mahmoud Amer-->
+<html lang="ar">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- custom CSS-->
+    <link rel="stylesheet" href="css/customstyles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
+    
+    <!-- jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--Floating WhatsApp css-->
+    <link rel="stylesheet" href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
+    <!--Floating WhatsApp javascript-->
+    <script type="text/javascript" src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"></script>
+
+     <!-- jQuery animation for brand name and logo-->  
+    <script type="text/javascript"> 
+      $(document).ready(function(){
+        $("#brandname").animate({
+          right: '0px',
+        },700);
+        $("#logoimg").animate({
+          opacity: '1',
+        },1800);
+      });
+    </script> 
+
+    <title>إكليل الجمال المنصوره</title>
+  </head>
+  <body>
+    <!--Div where the WhatsApp plug-in will be rendered-->  
+    <div id="WAButton"></div>  
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v9.0'
+        });
+      };
+
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <!-- FB Chat Plugin code -->
+    <div class="fb-customerchat"
+      attribution=setup_tool
+      page_id="198781707496957"
+      logged_in_greeting="مرحبا كيف يمكننا مساعدتك ؟"
+      logged_out_greeting="مرحبا كيف يمكننا مساعدتك ؟">
+    </div>
+
+    <header>
+      <!-- logo and brandname at the top-->
+      <div class="container-fluid">
+          <a href="index.html" id="logotop" class="row justify-content-center">
+              <h1 id="brandname" class="col-sm-4">إكليل الجمال المنصوره</h1>
+              <div id="logoimg" class="col-sm-4" alt="logo"></div>
+          </a>
+      <div> <!--end of logo and brandname-->
+      <!-- navigation-->
+      <nav class="nav nav-pills nav-fill">
+          <a class="nav-item nav-link" target="_blank" href="https://www.facebook.com/eklilelmansoura">صفحة الفيسبوك</a>
+          <a class="nav-item nav-link" href="index.html#contactinfo">العنوان ورقم الهاتف</a>
+          <a class="nav-item nav-link" href="#">المنتجات</a>
+          <a class="nav-item nav-link active" href="index.html">الصفحة الرئيسية</a>
+      </nav>
+    </header>
+
+    <!--carousel slides-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/insidestore2.PNG" class="d-block img-fluid" alt="inside of store">
+        </div>
+        <div class="carousel-item">
+          <img src="images/productexample.jpg" class="d-block img-fluid" alt="product deal">
+        </div>
+        <div class="carousel-item">
+          <img src="images/store.PNG" class="d-block img-fluid" alt="outside of store">
+        </div>
+        <div class="carousel-item">
+          <img src="images/insidestore.PNG" class="d-block img-fluid" alt="inside of store 2">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div> <!-- end of carousel-->
+
+    <!-- map and contact info-->
+    <section id="contactinfo" class="container-fluid">
+      <div class="row justify-content-center">
+        <!-- map tile-->
+        <div class="col-sm-6">
+          <a href="https://g.page/ekliloils?share" target="_blank">
+            <div id="map-tile">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3418.7077687446154!2d31.36497011466185!3d31.03439057808341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f79dc65efbdc31%3A0x17f5f4062ab88272!2sEklil%20For%20Natural%20Oils%20%26%20Cosmetics!5e0!3m2!1sen!2sus!4v1608221615604!5m2!1sen!2sus" 
+              width="100%" height="300" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0">
+              </iframe>
+              <span>معلومات عن المكان</span>
+            </div>
+          </a>
+        </div> <!-- end of map tile-->
+
+        <!-- contact info tile-->
+        <div id="contact-tile" class="col-sm-6">
+          <span class="float-end">:العنوان</span> <br>
+          <p dir="rtl">محل إكليل للزيوت الطبيعيه المنصوره
+            14 شارع رياض الصالحين المتفرع من شارع الترعه و شارع 6 اكتوبر</p>
+          <button class="float-end">
+            <a href="tel:01115696686">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M11 1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
+                <path fill-rule="evenodd" d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+              </svg>  رقم الهاتف: 01115696686
+            </a>
+          </button>
+          <br><br>
+          <p dir="rtl">للاستفسارات والطلبات أرسل لنا رسالة على الواتس اب أو على الفيس بوك.</p>
+        </div>
+      </div>
+    </section><!-- end of map and contact info-->
+    
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    
+    <!-- WhatsApp plug-in -->
+    <script type="text/javascript">
+      $(function () {
+              $('#WAButton').floatingWhatsApp({
+                  phone: '+201115696686', //WhatsApp Business phone number
+                  headerTitle: 'أرسل لنا رسالة على الواتس اب', //Popup Title
+                  popupMessage: 'مرحبا كيف يمكننا مساعدتك ؟', //Popup Message
+                  showPopup: true, //Enables popup display
+                  buttonImage: '<img src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/whatsapp.svg" />', //Button Image
+                  position: "right" //Position: left | right
+   
+              });
+          });
+   </script>  
+  </body>
+</html>
