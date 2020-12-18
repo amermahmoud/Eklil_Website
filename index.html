@@ -8,18 +8,18 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <!-- custom CSS-->
-    <link rel="stylesheet" href="css/customstyles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
-    
     <!-- jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--Floating WhatsApp css-->
     <link rel="stylesheet" href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
     <!--Floating WhatsApp javascript-->
     <script type="text/javascript" src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"></script>
+
+    <!-- custom CSS-->
+    <link rel="stylesheet" href="css/customstyles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
 
      <!-- jQuery animation for brand name and logo-->  
     <script type="text/javascript"> 
@@ -154,15 +154,23 @@
     <!-- WhatsApp plug-in -->
     <script type="text/javascript">
       $(function () {
-              $('#WAButton').floatingWhatsApp({
+              var whatsapp_settings ={
                   phone: '+201115696686', //WhatsApp Business phone number
                   headerTitle: 'أرسل لنا رسالة على الواتس اب', //Popup Title
                   popupMessage: 'مرحبا كيف يمكننا مساعدتك ؟', //Popup Message
                   showPopup: true, //Enables popup display
                   buttonImage: '<img src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/whatsapp.svg" />', //Button Image
-                  position: "right" //Position: left | right
-   
-              });
+                  position: "left" //Position: left | right
+              }
+              if ($(window).width()<576){ // if window size is extra small
+                $('#WAButton').floatingWhatsApp(whatsapp_settings);
+                $('#WAButton').css({"bottom":"150px","left":"5px", "right":"auto"}); //adjusting position of button
+              }
+              else{
+                whatsapp_settings.position="right";
+                $('#WAButton').floatingWhatsApp(whatsapp_settings);
+                $('#WAButton').css({"bottom":"20px","right":"100px","left":"auto"});
+              }
           });
    </script>  
   </body>
