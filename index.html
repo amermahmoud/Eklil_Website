@@ -70,11 +70,11 @@
               <h1 id="brandname" class="col-sm-4">إكليل الجمال المنصوره</h1>
               <div id="logoimg" class="col-sm-4" alt="logo"></div>
           </a>
-      <div> <!--end of logo and brandname-->
+        </div> <!--end of logo and brandname-->
       <!-- navigation-->
       <nav class="nav nav-pills nav-fill">
           <a class="nav-item nav-link" target="_blank" href="https://www.facebook.com/eklilelmansoura">صفحة الفيسبوك</a>
-          <a class="nav-item nav-link" href="index.html#contactinfo">العنوان ورقم الهاتف</a>
+          <a class="nav-item nav-link" href="#contactinfo">العنوان ورقم الهاتف</a>
           <a class="nav-item nav-link" href="#">المنتجات</a>
           <a class="nav-item nav-link active" href="index.html">الصفحة الرئيسية</a>
       </nav>
@@ -167,10 +167,12 @@
                 $('#WAButton').css({"bottom":"150px","left":"5px", "right":"auto"}); //adjusting position of button
               }
               else{
-                whatsapp_settings.position="right";
+                whatsapp_settings.position="right"; // for pop-up window to show correctly
                 $('#WAButton').floatingWhatsApp(whatsapp_settings);
-                $('#WAButton').css({"bottom":"20px","right":"100px","left":"auto"});
+                $('#WAButton').css({"bottom":"24px","right":"100px","left":"auto"});
               }
+              $('.floating-wpp-button').css({"height":"60px","width":"60px"}); //decreased size to match FB button
+
           });
    </script>  
   </body>

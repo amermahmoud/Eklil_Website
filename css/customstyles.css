@@ -10,7 +10,7 @@
     position: relative;
     opacity: 0;
 }
-a>h1{
+h1{
     font-family: 'Rakkas', cursive;
     font-size: 4em;
     color:#ffb836;
@@ -109,13 +109,13 @@ a>h1{
 }
 /*medium to large view*/
 @media(min-width:768px) and (max-width:1199px){
-    a>h1{
+    h1{
         padding-top: 10px;
     } 
 }
 /*small view*/
 @media(min-width:576px) and (max-width:767px){
-    a>h1{
+    h1{
         font-size: 3em;
         padding-top: 10px;
     }
@@ -127,7 +127,7 @@ a>h1{
 }
 /* extra small view*/
 @media(max-width:575px){
-    a>h1{
+    h1{
         font-size: 3em;
         padding-top: 25px;
     }
