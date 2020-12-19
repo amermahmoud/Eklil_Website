@@ -148,6 +148,7 @@ h1{
         height:200px;
     }
     #contact-tile{
+        position: relative;
         margin-top: 0px;
         font-size: 1em;
         margin-bottom: 80px;

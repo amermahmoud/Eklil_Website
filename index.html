@@ -164,15 +164,16 @@
               }
               if ($(window).width()<576){ // if window size is extra small
                 $('#WAButton').floatingWhatsApp(whatsapp_settings);
-                $('#WAButton').css({"bottom":"150px","left":"5px", "right":"auto"}); //adjusting position of button
+                $('#WAButton').css({"bottom":"77px","left":"40px", "position":"absolute"}); //adjusting position of button
+                $('.floating-wpp-button').css({"height":"45px","width":"45px"});
+
               }
               else{
                 whatsapp_settings.position="right"; // for pop-up window to show correctly
                 $('#WAButton').floatingWhatsApp(whatsapp_settings);
                 $('#WAButton').css({"bottom":"24px","right":"100px","left":"auto"});
+                $('.floating-wpp-button').css({"height":"60px","width":"60px"}); //decreased size to match FB button
               }
-              $('.floating-wpp-button').css({"height":"60px","width":"60px"}); //decreased size to match FB button
-
           });
    </script>  
   </body>
