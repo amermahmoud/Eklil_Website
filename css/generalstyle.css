@@ -1,0 +1,73 @@
+/* homepage brand and navigation*/
+#logotop{
+    text-decoration: none;
+}
+#brandname{
+    position: relative;
+    right:500px;
+}
+#logoimg{
+    display: none;
+}
+h1{
+    font-family: 'Rakkas', cursive;
+    font-size: 4em;
+    color:#ffb836;
+    text-align: center;
+    padding-top: 40px;
+}
+.nav .nav-item{
+    border-radius: 25px;
+    border: solid 1px white;
+    margin: 10px 2px 1px 2px;
+    background-color: #ffb836;
+    color: white;
+    font-weight: 550;
+    
+}
+.nav .nav-item:hover, .nav-pills .nav-link.active{
+    background-color: white;
+    color: #ffb836;
+    border: solid 1px #ffb836;
+}
+
+/*medium to extra large view*/
+@media(min-width:768px){ 
+    /*more effecient to specify images this way so that large images don't load on small devices*/
+        #logoimg{
+            background: url("../images/eklillogo-lg.jpg") no-repeat;
+            width:161px;
+            height:159px;
+        }
+}
+/*medium to large view*/
+@media(min-width:768px) and (max-width:1199px){
+    h1{
+        padding-top: 10px;
+    } 
+}
+/*small view*/
+@media(min-width:576px) and (max-width:767px){
+    h1{
+        font-size: 3em;
+        padding-top: 10px;
+    }
+    #logoimg{
+        background: url("../images/eklillogo-sm.jpg") no-repeat;
+        width:120px;
+        height:119px;
+    }
+}
+/* extra small view*/
+@media(max-width:575px){
+    h1{
+        font-size: 3em;
+        padding-top: 25px;
+    }
+    #logoimg{
+        background: url("../images/eklillogo-xs.jpg") no-repeat;
+        width:75px;
+        height:74px;
+        margin-top: -10px;
+    }
+}

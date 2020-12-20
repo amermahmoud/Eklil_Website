@@ -18,46 +18,20 @@
     <script type="text/javascript" src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"></script>
 
     <!-- custom CSS-->
-    <link rel="stylesheet" href="css/customstyles.css">
+    <link rel="stylesheet" href="css/generalstyle.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
 
-     <!-- jQuery animation for brand name and logo-->  
-    <script type="text/javascript"> 
-      $(document).ready(function(){
-        $("#brandname").animate({
-          right: '0px',
-        },700);
-        $("#logoimg").animate({
-          opacity: '1',
-        },1800);
-      });
-    </script> 
+     <!-- custom JS -->  
+    <script type="text/javascript" src="js/general.js"></script> 
 
     <title>إكليل الجمال المنصوره</title>
   </head>
   <body>
-    <!-- Load Facebook SDK for JavaScript -->
-    <div id="fb-root"></div>
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml            : true,
-          version          : 'v9.0'
-        });
-      };
-
-      (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-      fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-
     <!-- FB Chat Plugin code -->
+    <div id="fb-root"></div>
     <div class="fb-customerchat"
       attribution=setup_tool
       page_id="198781707496957"
@@ -152,40 +126,5 @@
     
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-
-    <script type="text/javascript">
-      $(function () {
-            //WhatsApp plug-in
-              var whatsapp_settings ={
-                  phone: '+201115696686', //WhatsApp Business phone number
-                  headerTitle: 'أرسل لنا رسالة على الواتس اب', //Popup Title
-                  popupMessage: 'مرحبا كيف يمكننا مساعدتك ؟', //Popup Message
-                  showPopup: true, //Enables popup display
-                  buttonImage: '<img src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/whatsapp.svg" />', //Button Image
-                  position: "left" //Position: left | right
-              }
-              if ($(window).width()<576){ // if window size is extra small
-                $('#WAButton').floatingWhatsApp(whatsapp_settings);
-                $('#WAButton').css({"bottom":"77px","left":"40px", "position":"absolute"}); //adjusting position of button
-                $('.floating-wpp-button').css({"height":"45px","width":"45px"});
-
-              }
-              else{
-                whatsapp_settings.position="right"; // for pop-up window to show correctly
-                $('#WAButton').floatingWhatsApp(whatsapp_settings);
-                $('#WAButton').css({"bottom":"24px","right":"100px","left":"auto"});
-                $('.floating-wpp-button').css({"height":"60px","width":"60px"}); //decreased size to match FB button
-              } //end of whatsapp plugin code
-
-              //animating clicking functionality for nav buttons on small devices
-              if ($(window).width()<576){ // if window size is extra small
-                //unbinds the hover event for navigaton buttons so that a button doesn't get stuck hovered on phones
-                $('.nav-item').unbind("mouseenter mouseleave");
-                $('.nav-item').click(function(){ //animates the button clicking
-                  $(this).animate({backgroundColor:"white",color:"#ffb836"},100).delay(400).animate({backgroundColor:"#ffb836",color:"white"},100);
-                })
-              }
-          });
-   </script>  
   </body>
 </html>
