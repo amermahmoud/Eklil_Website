@@ -9,7 +9,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <!-- jQuery-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!--Floating WhatsApp css-->
     <link rel="stylesheet" href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
     <!--Floating WhatsApp javascript-->
@@ -150,10 +152,10 @@
     
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    
-    <!-- WhatsApp plug-in -->
+
     <script type="text/javascript">
       $(function () {
+            //WhatsApp plug-in
               var whatsapp_settings ={
                   phone: '+201115696686', //WhatsApp Business phone number
                   headerTitle: 'أرسل لنا رسالة على الواتس اب', //Popup Title
@@ -173,6 +175,15 @@
                 $('#WAButton').floatingWhatsApp(whatsapp_settings);
                 $('#WAButton').css({"bottom":"24px","right":"100px","left":"auto"});
                 $('.floating-wpp-button').css({"height":"60px","width":"60px"}); //decreased size to match FB button
+              } //end of whatsapp plugin code
+
+              //animating clicking functionality for nav buttons on small devices
+              if ($(window).width()<576){ // if window size is extra small
+                //unbinds the hover event for navigaton buttons so that a button doesn't get stuck hovered on phones
+                $('.nav-item').unbind("mouseenter mouseleave");
+                $('.nav-item').click(function(){ //animates the button clicking
+                  $(this).animate({backgroundColor:"white",color:"#ffb836"},100).delay(400).animate({backgroundColor:"#ffb836",color:"white"},100);
+                })
               }
           });
    </script>  
