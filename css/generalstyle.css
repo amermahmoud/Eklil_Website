@@ -41,7 +41,7 @@ h1{
         }
 }
 /*medium to large view*/
-@media(min-width:768px) and (max-width:1199px){
+@media(min-width:768px) and (max-width:1227px){ /*tested and adjusted large view max width here*/
     h1{
         padding-top: 10px;
     } 

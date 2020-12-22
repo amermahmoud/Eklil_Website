@@ -1,0 +1,25 @@
+#contactus{
+    text-align: center;
+    margin-top: 35px;
+    font-family: 'Rakkas', cursive;
+    font-size: 2em;
+    color: #708a38;
+    font-weight: 200;
+}
+#productsection{
+    margin-top: 32px;   
+}
+#oliveoil{
+    background: url("../images/eklil_products/oliveoil_poster-lg.jpg") no-repeat;
+    width: 481px;
+    height: 500px;
+}
+#productsection div{
+    margin: 0 35px 40px 35px;
+}
+/*extra large view*/
+@media(min-width:576px){
+    .container{
+        max-width: none;
+    }
+}
