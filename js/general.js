@@ -49,7 +49,7 @@ $(function () {
     }
     else{ //if window size is not extra small
       $('#WAButton').floatingWhatsApp(whatsapp_settings);
-      $('#WAButton').css({"bottom":"24px","right":"100px","left":"auto"});
+      $('#WAButton').css({"bottom":"24px","right":"100px","left":"auto","z-index":"1"});
       $('.floating-wpp-button').css({"height":"60px","width":"60px"}); //decreased size to match FB button
     } //end of whatsapp plugin code
 
