@@ -37,7 +37,7 @@ $(function () {
       var pageURL = $(location).attr("href");
       if (pageURL=="https://eklil-oils.com/products.html"){ //adjusting settings based on page
         $('#WAButton').floatingWhatsApp(whatsapp_settings);
-        $('#WAButton').css({"top":"330px","left":"46%", "position":"absolute"}); //adjusting position of button
+        $('#WAButton').css({"top":"325px","left":"46%", "position":"absolute"}); //adjusting position of button
         $('.floating-wpp-button').css({"height":"35px","width":"35px"});
       }
       else{
