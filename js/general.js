@@ -29,15 +29,25 @@ $(function () {
         popupMessage: 'مرحبا كيف يمكننا مساعدتك ؟', //Popup Message
         showPopup: true, //Enables popup display
         buttonImage: '<img src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/whatsapp.svg" />', //Button Image
-        position: "left" //Position: left | right
+        position: "right" //Position: left | right
     }
     if ($(window).width()<576){ // if window size is extra small
-      $('#WAButton').floatingWhatsApp(whatsapp_settings);
-      $('#WAButton').css({"bottom":"77px","left":"40px", "position":"absolute"}); //adjusting position of button
-      $('.floating-wpp-button').css({"height":"45px","width":"45px"});
+      /*adjusting whatsapp button for small screens, making its position absolute instead of fixed
+      so that FB prompt doesn't cover it*/
+      var pageURL = $(location).attr("href");
+      if (pageURL=="https://eklil-oils.com/products.html"){ //adjusting settings based on page
+        $('#WAButton').floatingWhatsApp(whatsapp_settings);
+        $('#WAButton').css({"top":"330px","left":"46%", "position":"absolute"}); //adjusting position of button
+        $('.floating-wpp-button').css({"height":"35px","width":"35px"});
+      }
+      else{
+        whatsapp_settings.position="left"; // for pop-up window to show correctly
+        $('#WAButton').floatingWhatsApp(whatsapp_settings);
+        $('#WAButton').css({"bottom":"77px","left":"40px", "position":"absolute"}); //adjusting position of button
+        $('.floating-wpp-button').css({"height":"45px","width":"45px"});
+      }
     }
-    else{
-      whatsapp_settings.position="right"; // for pop-up window to show correctly
+    else{ //if window size is not extra small
       $('#WAButton').floatingWhatsApp(whatsapp_settings);
       $('#WAButton').css({"bottom":"24px","right":"100px","left":"auto"});
       $('.floating-wpp-button').css({"height":"60px","width":"60px"}); //decreased size to match FB button

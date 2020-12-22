@@ -7,19 +7,33 @@
     font-weight: 200;
 }
 #productsection{
-    margin-top: 32px;   
+    margin-top: 32px;
+    margin-bottom: 50px;   
 }
-#oliveoil{
-    background: url("../images/eklil_products/oliveoil_poster-lg.jpg") no-repeat;
-    width: 481px;
-    height: 500px;
+#productsection img{
+    margin: 0 35px 30px 35px;
 }
-#productsection div{
-    margin: 0 35px 40px 35px;
-}
-/*extra large view*/
+/*small view and above*/
 @media(min-width:576px){
+    /*removing the max width for containers for small view and above so that 
+    more than 2 products show on the same line when possible*/
     .container{
         max-width: none;
+    }
+}
+/*large view and above*/
+@media(min-width:992px){
+    #productsection img{
+        width: 28%;
+    }
+}
+/*extra small view*/
+@media(max-width:575px){
+    #contactus{
+        margin-top: 25px;
+        font-size: 1.5em;
+    }
+    #productsection{
+        margin-top: 35px;
     }
 }
