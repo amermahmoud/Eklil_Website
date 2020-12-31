@@ -4,7 +4,7 @@ $(document).ready(function(){
       right: '0px',
     },700);
     $("#logoimg").fadeIn(1800);
-  });
+});
 
 //Load Facebook SDK for JavaScript
 window.fbAsyncInit = function() {
@@ -14,11 +14,11 @@ window.fbAsyncInit = function() {
     });
   };
 (function(d, s, id) {
-var js, fjs = d.getElementsByTagName(s)[0];
-if (d.getElementById(id)) return;
-js = d.createElement(s); js.id = id;
-js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-fjs.parentNode.insertBefore(js, fjs);
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
 $(function () {
