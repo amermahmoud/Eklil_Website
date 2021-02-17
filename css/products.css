@@ -36,7 +36,7 @@
     #productsection{
         margin-top: 35px;
     }
-    .benefits{
+    #productsection.benefits{
         margin-top: 55px;
     }
 }
