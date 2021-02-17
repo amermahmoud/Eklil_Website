@@ -35,7 +35,7 @@ $(function () {
       /*adjusting whatsapp button for small screens, making its position absolute instead of fixed
       so that FB prompt doesn't cover it*/
       var pageURL = $(location).attr("href");
-      if (pageURL=="https://eklil-oils.com/products.html"){ //adjusting settings based on page
+      if (pageURL=="https://eklil-oils.com/products.html" || pageURL=="https://eklil-oils.com/benefits.html" ){ //adjusting settings based on page
         $('#WAButton').floatingWhatsApp(whatsapp_settings);
         $('#WAButton').css({"top":"325px","left":"46%", "position":"absolute"}); //adjusting position of button
         $('.floating-wpp-button').css({"height":"35px","width":"35px"});
